@@ -1,33 +1,33 @@
 import React from 'react'
+import styled from 'styled-components'
 import Link from 'gatsby-link'
 
+const Container = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 54px;
+  margin-bottom: 46px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+`
+
 const Header = ({ siteTitle }) => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
-    <div
+  <Container>
+    <Link
+      to="/cf-agent"
       style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '1.45rem 1.0875rem',
+        color: 'white',
+        textDecoration: 'none',
+        textTransform: 'uppercase'
       }}
     >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: 'white',
-            textDecoration: 'none',
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </div>
+      CF Agent
+    </Link>
+  </Container>
 )
 
 export default Header
