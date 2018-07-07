@@ -5,6 +5,8 @@ const Article = ({ pathContext: { data } }) => {
   return (
     <div>
       <h1>{data.title}</h1>
+      <h4>{data.overview.overview}</h4>
+      <p>{data.body.body}</p>
     </div>
   )
 }

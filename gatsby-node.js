@@ -31,7 +31,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         console.log(node)
         const slug = node.product.split(" ").join("-").toLowerCase();
         createPage({
-          path: `src/pages/${slug}`,
+          path: slug,
           component: path.resolve(`./src/templates/product-guide.js`),
           context: {
             data: node
@@ -64,7 +64,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
       result.data.allContentfulArticle.edges.forEach(({ node }) => {
         console.log('article node', node)
         createPage({
-          path: `src/pages/articles/${node.id}`,
+          path: `articles/${node.id}`,
           component: path.resolve("./src/templates/article.js"),
           context: {
             data: node
